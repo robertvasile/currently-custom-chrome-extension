@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <link href="css/cssResets.css" rel="stylesheet" />
+    <link href="css/typography.css" rel="stylesheet" />
+    <link href="css/fontAwsome.css" rel="stylesheet" />
+    <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/defaultBase.css" rel="stylesheet" />
+    <link href="css/weatherWidgit.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/_themes.css" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@100;300;400&&display=swap"
+      rel="stylesheet"
+    />
+    <title>Currently</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div id="mySidenav" class="sidenav">
+        <div class="nav_header_section">
+          <div id="logo"></div>
+          <a id="nav_themes"><i class="fa fa-paint-brush"></i> Themes</a>
+          <span class="nav_closebtn" id="closeSideNav"
+            ><i class="fa fa-times"></i
+          ></span>
+        </div>
+
+        <div id="nav_loadInfo_con">
+          <div id="themes_con">
+            <div id="themes_list">
+              <div class="theme classic">
+                <!--add active class here when local storage key is classic-->
+                <div class="item">
+                  <div class="preview">
+                    <div style="background-color: #222"></div>
+                    <div style="background-color: #e5e5e5"></div>
+                    <div style="background-color: #5cbf94"></div>
+                    <div style="background-color: #84c0d7"></div>
+                    <div style="background-color: #903d3d"></div>
+                    <div style="background-color: #d2ab59"></div>
+                    <div style="background-color: #6fb269"></div>
+                    <div style="background-color: #6c5287"></div>
+                    <div style="background-color: #3193a5"></div>
+                  </div>
+                  <p class="theme_label">
+                    Classic<span class="theme_checkmark"
+                      ><i class="fa fa-check"></i
+                    ></span>
+                  </p>
+                  <!--add display block to .theme_lable span  when local storage key is classic-->
+
+                  <p class="theme_desc">Classic Colors</p>
+                </div>
+              </div>
+              <div class="theme updated-base-colors">
+                <div class="item">
+                  <div class="preview">
+                    <div style="background-color: #c34d40"></div>
+                    <div style="background-color: #4242ba"></div>
+                    <div style="background-color: #2e3c56"></div>
+                    <div style="background-color: #e59c2f"></div>
+                    <div style="background-color: #412f3f"></div>
+                    <div style="background-color: #ea724c"></div>
+                    <div style="background-color: #5c2533"></div>
+                    <div style="background-color: #2d442f"></div>
+                    <div style="background-color: #8dd397"></div>
+                  </div>
+                  <p class="theme_label">
+                    New Colors<span class="theme_checkmark"
+                      ><i class="fa fa-check"></i
+                    ></span>
+                  </p>
+                  <p class="theme_desc">Newly updated base colors</p>
+                </div>
+              </div>
+            </div>
+            <div id="themes_options">
+              <div class="themeOpt_con theme_classic">
+                <h2>Classic</h2>
+                <p>Select text color</p>
+                <input
+                  type="radio"
+                  name="text-color"
+                  class="light-text"
+                /><label>Light</label>
+                <input type="radio" name="text-color" class="dark-text" /><label
+                  >Dark</label
+                >
+                <hr />
+                <p>Select what classic color you would like below!</p>
+                <hr />
+                <h2>Background Color</h2>
+                <div class="themeOpt_preview">
+                  <div class="theme-list grid-container">
+                    <div class="dark-theme-button grid-item dark color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="light-theme-button grid-item light color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="mint-theme-button grid-item mint color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="blue-theme-button grid-item blue color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="red-theme-button grid-item red color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="gold-theme-button grid-item gold color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="green-theme-button grid-item green color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="purple-theme-button grid-item purple color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="aqua-theme-button grid-item aqua color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div class="themeOpt_con theme_updated hidden">
+                <h2>New</h2>
+                <p>Select text color</p>
+                <input
+                  type="radio"
+                  name="text-color"
+                  class="light-text"
+                /><label>Light</label>
+                <input type="radio" name="text-color" class="dark-text" /><label
+                  >Dark</label
+                >
+                <hr />
+                <p>Select which new color you would like below!</p>
+                <hr />
+                <h2>Background Color</h2>
+                <div class="themeOpt_preview">
+                  <div class="theme-list grid-container">
+                    <div class="dark-salmon-button grid-item darksalmon color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="dark-purple-button grid-item darkpurple color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="slate-button grid-item slate color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="fire-bush-button grid-item firebush color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="thunder-button grid-item thunder color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div
+                      class="burnt-sienna-button grid-item burntsienna color"
+                    >
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="plum-button grid-item plum color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="forrest-button grid-item forrest color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="vista-blue-button grid-item vistablue color">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div class="theme-save save-button">SAVE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header>
+        <span id="openSideNav"><i class="fa fa-bars"></i></span>
+        <div class="ext-logo">
+          <svg
+            width="60px"
+            height="60px"
+            viewBox="0 0 609 609"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          >
+            <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+            <title>Imported Layers</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              sketch:type="MSPage"
+            >
+              <g id="Imported-Layers" sketch:type="MSLayerGroup">
+                <path
+                  d="M453.246,305.38 C449.139,290.418 442.977,276.042 435.056,263.133 C404.838,207.096 352.615,146.953 324.156,116.147 C313.595,104.705 295.405,104.705 284.843,116.147 C256.385,146.953 204.163,207.096 173.944,263.133 C166.022,276.042 159.568,290.124 155.754,305.38 C152.527,315.942 150.767,325.917 150.767,335.012 L150.767,339.706 L150.767,344.4 C150.767,429.189 219.712,498.134 304.5,498.134 C389.288,498.134 458.233,429.189 458.233,344.4 L458.233,339.706 L458.233,335.012 C458.233,325.917 456.473,315.942 453.246,305.38 Z"
+                  id="Fill-1"
+                  fill="#526DC3"
+                  sketch:type="MSShapeGroup"
+                ></path>
+                <path
+                  d="M304.5,581.281 C151.972,581.279 27.721,457.027 27.719,304.5 C27.721,151.972 151.972,27.721 304.5,27.719 C457.027,27.721 581.278,151.972 581.281,304.5 C581.278,457.027 457.027,581.279 304.5,581.281 M304.5,2.434 C221.159,2.434 145.648,36.279 90.963,90.963 C36.279,145.648 2.435,221.159 2.434,304.5 C2.435,387.842 36.279,463.352 90.963,518.037 C145.648,572.721 221.159,606.565 304.5,606.566 C387.841,606.565 463.352,572.721 518.037,518.037 C572.721,463.352 606.565,387.841 606.566,304.5 C606.565,221.159 572.721,145.648 518.037,90.963 C463.352,36.279 387.841,2.434 304.5,2.434"
+                  id="Fill-2"
+                  fill="#526DC3"
+                  sketch:type="MSShapeGroup"
+                ></path>
+                <path
+                  d="M304.5,579.281 C228.788,579.281 160.098,548.443 110.327,498.673 C60.557,448.901 29.719,380.212 29.719,304.5 C29.719,228.788 60.557,160.098 110.327,110.327 C160.098,60.557 228.788,29.719 304.5,29.719 C380.212,29.719 448.901,60.557 498.673,110.327 C548.443,160.098 579.28,228.788 579.281,304.5 C579.28,380.212 548.443,448.901 498.673,498.673 C448.901,548.443 380.212,579.281 304.5,579.281 M304.5,27.719 C151.972,27.721 27.721,151.972 27.719,304.5 C27.721,457.027 151.972,581.279 304.5,581.281 C457.027,581.279 581.278,457.027 581.281,304.5 C581.278,151.972 457.027,27.721 304.5,27.719 M304.5,606.566 L304.5,606.566 C221.159,606.565 145.648,572.721 90.963,518.037 C36.279,463.352 2.435,387.842 2.434,304.5 C2.435,221.159 36.279,145.648 90.963,90.963 C145.648,36.279 221.159,2.434 304.5,2.434 C387.841,2.434 463.352,36.279 518.037,90.963 C572.721,145.648 606.565,221.159 606.566,304.5 C606.565,387.841 572.721,463.352 518.037,518.037 C463.352,572.721 387.841,606.565 304.5,606.566 M304.5,0.434 C136.717,0.435 0.435,136.717 0.434,304.5 C0.435,472.283 136.717,608.565 304.5,608.566 C472.283,608.565 608.565,472.283 608.566,304.5 C608.565,136.718 472.283,0.435 304.5,0.434"
+                  id="Fill-3"
+                  fill="#4C61A1"
+                  sketch:type="MSShapeGroup"
+                ></path>
+                <path
+                  d="M233.501,344.4 C233.501,383.612 265.288,415.399 304.5,415.399 C343.712,415.399 375.499,383.612 375.499,344.4 C375.499,305.189 343.712,273.401 304.5,273.401 C265.288,273.401 233.501,305.189 233.501,344.4 Z"
+                  id="Fill-4"
+                  sketch:type="MSShapeGroup"
+                ></path>
+                <path
+                  d="M304.5,296.285 C331.073,296.285 352.615,317.827 352.615,344.4 C352.615,370.974 331.073,392.516 304.5,392.516 C277.927,392.516 256.385,370.974 256.385,344.4 C256.385,317.827 277.927,296.285 304.5,296.285"
+                  id="Fill-5"
+                  fill="#FFFFFF"
+                  sketch:type="MSShapeGroup"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </header>
+      <div class="main">
+        <div class="searchbar__container">
+          <form
+            class="searchbar__searchform"
+            method="get"
+            action="https://search.yahoo.com/yhs/search"
+            target="_blank"
+          >
+            <input type="hidden" name="param1" value="17000101" />
+            <input
+              type="hidden"
+              name="param2"
+              value="00000000-0000-0000-0000-000000000000"
+            />
+            <input
+              type="hidden"
+              name="param3"
+              value="currently_~US~appfocus1~"
+            />
+            <input type="hidden" name="param4" value="~chrome~~" />
+            <input
+              type="hidden"
+              name="type"
+              value="yhs-pty_weather_appfocus1_ch"
+            />
+            <input
+              class="main__searchbar"
+              type="text"
+              name="p"
+              value=""
+              autocomplete="off"
+            />
+            <input class="searchbar__button" type="submit" value="&#xf002;" />
+            <ul class="searchbar__suggestions"></ul>
+          </form>
+        </div>
+        <div class="clock"></div>
+        <div class="main__date"></div>
+        <div class="main__current-temp"></div>
+        <div class="main__weather hidden">
+          <div class="main__forecast">
+            <div class="forecast__day">
+              <i class="wi"></i>
+              <div class="forecast__Weather"></div>
+              <div class="forecast__temp">
+                <div class="temp__max"></div>
+                <div class="temp__min"></div>
+              </div>
+              <div class="forecast__nameOfDay"></div>
+            </div>
+            <div class="forecast__day">
+              <i class="wi"></i>
+              <div class="forecast__Weather"></div>
+              <div class="forecast__temp">
+                <div class="temp__max"></div>
+                <div class="temp__min"></div>
+              </div>
+              <div class="forecast__nameOfDay"></div>
+            </div>
+            <div class="forecast__day">
+              <i class="wi"></i>
+              <div class="forecast__Weather"></div>
+              <div class="forecast__temp">
+                <div class="temp__max"></div>
+                <div class="temp__min"></div>
+              </div>
+              <div class="forecast__nameOfDay"></div>
+            </div>
+            <div class="forecast__day">
+              <i class="wi"></i>
+              <div class="forecast__Weather"></div>
+              <div class="forecast__temp">
+                <div class="temp__max"></div>
+                <div class="temp__min"></div>
+              </div>
+              <div class="forecast__nameOfDay"></div>
+            </div>
+            <div class="forecast__day">
+              <i class="wi"></i>
+              <div class="forecast__Weather"></div>
+              <div class="forecast__temp">
+                <div class="temp__max"></div>
+                <div class="temp__min"></div>
+              </div>
+              <div class="forecast__nameOfDay"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main__location"></div>
+        <div class="weather-button">Update Weather</div>
+      </div>
+      <div class="menu invisible">
+        <ul class="theme-list">
+          <li class="theme-one">Dark Theme</li>
+          <li>Theme 2</li>
+          <li>Theme 3</li>
+        </ul>
+      </div>
+      <footer>
+        <span>Currently</span>
+        <a href="../pdf/privacy.pdf" target="_blank">Privacy Policy</a>
+      </footer>
+    </div>
+  </body>
+  <script src="background.js"></script>
+  <script src="app.js"></script>
+  <script src="js/theme-pick.js"></script>
+  <script src="js/autosuggest.js"></script>
+</html>

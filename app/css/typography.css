@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Weather';
+  src: url('../fonts/weather.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open-Light';
+  src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open-Reg';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open-Bold';
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}

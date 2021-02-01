@@ -1,0 +1,19 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "app/index.html"
+   },
+   "content_security_policy": "script-src 'self'; object-src 'self';",
+   "description": "Replace new tab screen with current time and weather.",
+   "differential_fingerprint": "1.1bb3511ff4fd032254d73d5a9be5dbe7eb3a4b0a8b2d3bbdf76f03c29525305a",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "96": "images/icon96.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBY3p6E6TGtVMLW3Lb1h2GZNgji/UOCGXaSnrnnNfV5xGzM+A7IYYUgDiwYnsgRVT2SX9F7s36aEqbVEil5oqsRbxHIMuzyB8Cdj9Y6zOF9jZz/mDhGE+gyDdsYBBfbzGeNCSGrHW/CX5EH75tipTWAv7jdruoqnEyotbIShHaTwIDAQAB",
+   "manifest_version": 2,
+   "name": "Currently",
+   "permissions": [ "geolocation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.5.3"
+}

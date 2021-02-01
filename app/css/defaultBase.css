@@ -1,0 +1,108 @@
+/**************************
+SLIDE OUT NAV
+**************************/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.nav_header_section{
+    display: block;
+    border-bottom: 1px solid #eaeaea;
+    position:relative;
+    height:55px;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    margin: 13px 15px 0px 19px;
+    padding-right: 15px;
+    background-size: 30px;
+    float: left;
+    display: inline-block;
+    background-image: url(../../images/currently3.svg);
+    background-repeat: no-repeat;
+    border-right: 1px solid #eaeaea;
+}
+#nav_themes{
+    font-family: 'Helvetica Neue', 'Open-Bold', sans-serif;
+    font-weight: bold;
+    float: left;
+    text-align: left;
+    color: #aaa;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 20px 20px 20px 0px;
+}
+#nav_options{
+    font-family: 'Helvetica Neue', 'Open-Bold', sans-serif;
+    font-weight: bold;
+    float: left;
+    text-align: left;
+    color: #aaa;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 20px 20px 20px 0px;
+}
+.fa-gear {
+    padding-right: 3px;
+}
+.nav_closebtn {
+    top: 15px;
+    right: 15px;
+    color: #ccc;
+    font-size: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+.nav_header_section a:hover, .nav_header_section span:hover,.nav_header_section #nav_themes:hover, .nav_header_section #nav_options:hover, .nav_header_section #nav_themes.active, .nav_header_section #nav_options.active  {
+    color: #526DC3;
+}
+
+/**************************
+main body content
+**************************/
+#openSideNav {
+    -webkit-transition: all 150ms ease-in-out;
+    font-size: 2em;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.fullforcast {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 130;
+    font-family: 'Helvetica Neue', 'Open-Bold', sans-serif;
+}
+.fullforcast .wunder {
+    color: inherit;
+    cursor: pointer;
+}
+.fullforcast .wunder, .fullforcastt .wunder path, .fullforcast .wunder .forecastlabel {
+    -webkit-transition: all 150ms ease-in-out;
+}
+.fullforcast .wunder svg {
+    display: block;
+    float: left;
+    margin-top: 2px;
+}
+.fullforcast .wunder .forecastlabel {
+    color: inherit;
+    margin-left: 5px;
+    padding-top: 7px;
+    display: inline-block;
+}
