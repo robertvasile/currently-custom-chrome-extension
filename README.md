@@ -1,5 +1,7 @@
 # Custom Currently Chrome Extension
 
+[Original Extension (Chrome Web Store)](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh?hl=en)
+
 ### Currently v3.5.3.1
 
 ![Custom Currently Chrome Extension v3.5.3.1](https://github.com/robertvasile/currently-custom-chrome-extension/blob/master/images/currently-preview.jpg?raw=true)
