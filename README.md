@@ -1,6 +1,6 @@
 # Custom Currently Chrome Extension
 
-### v3.5.3.1
+### Currently v3.5.3.1
 
 ![Custom Currently Chrome Extension v3.5.3.1](https://github.com/robertvasile/currently-custom-chrome-extension/blob/master/images/currently-preview.jpg?raw=true)
 
